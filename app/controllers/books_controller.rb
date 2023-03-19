@@ -2,18 +2,20 @@ class BooksController < ApplicationController
   def index
     @user = current_user
     @book = Book.new
+    @books = Book.all
   end
   
   def create
-    book = Book.new(book_params)
-    book.save
-    redirect_to root_path
+    @book = Book.new(book_params)
+    @book.save
+    redirect_to books_path
   end
 
   def show
   end
 
   def edit
+    @books = Book.all
   end
   
   private
