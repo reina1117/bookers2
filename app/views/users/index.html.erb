@@ -18,7 +18,9 @@
           <thead>
             <% @users.each do |user| %>
             <tr>
-              <th>image</th>
+              <th>
+              <%= image_tag user.get_profile_image(100,100) %>
+              </th>
               <th><%= user.name %></th>
               <th><%= link_to "Show", "/users/#{user.id}" %></th>
             </tr>

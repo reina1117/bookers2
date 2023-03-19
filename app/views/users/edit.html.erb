@@ -11,7 +11,7 @@
           <% end %>
         </ul>
         <% end %>
-        
+
         <%= form_with model: @user do |f| %>
         <div class="form-group">
           <%= f.label :Name %>
@@ -19,7 +19,7 @@
         </div>
         <div class="form-group">
           <%= f.label :Image %>
-          <%= f.file_field :image, accept: "image/*" %>
+          <%= f.file_field :profile_image, accept: "image/*" %>
         </div>
         <div class="form-group">
           <label for="user_introduction">Introduction</label><br>
