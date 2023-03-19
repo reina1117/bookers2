@@ -19,7 +19,9 @@ class BooksController < ApplicationController
   end
 
   def edit
-    @books = Book.all
+    @book = Book.find(params[:id])
+    @book.user == current_user
+    render "edit"
   end
   
   def destroy
